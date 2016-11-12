@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://scripts/enemy_0.gd" type="Script" id=1]
+[ext_resource path="res://media/enemy_0.png" type="Texture" id=2]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 0.0771561, 13.2464, -12.2696, 4.21669, -12.2696, -12.2302, 13.2992, -12.2763, 13.2992, 3.06495 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = Vector2Array( 0.0771561, 13.2464, -12.2696, 4.21669, -12.2696, -12.2302, 13.2992, -12.2763, 13.2992, 3.06495 )
+
+[node name="enemy_0" type="Area2D"]
+
+input/pickable = true
+shapes/0/shape = SubResource( 1 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+script/script = ExtResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+
+input/pickable = false
+shapes/0/shape = SubResource( 2 )
+shapes/0/transform = Matrix32( 1, 0, 0, 1, 0, 0 )
+shapes/0/trigger = false
+collision/layers = 1
+collision/mask = 1
+collision/margin = 0.08
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+
+texture = ExtResource( 2 )
+flip_v = true
+vframes = 3
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
+
+build_mode = 0
+polygon = Vector2Array( 0.0771561, 13.2464, -12.2696, 4.21669, -12.2696, -12.2302, 13.2992, -12.2763, 13.2992, 3.06495 )
+shape_range = Vector2( 0, 0 )
+trigger = false
+
+
