@@ -18,10 +18,10 @@ func _fixed_process(delta):
 		if get_node("KinematicBody2D/anim").get_current_animation() != "left":
 			get_node("KinematicBody2D/anim").play("left")
 	
-	if Input.is_action_pressed("ui_down") and get_node("KinematicBody2D").get_global_pos().y < OS.get_window_size().height:
+	if Input.is_action_pressed("ui_down") and get_node("KinematicBody2D").get_global_pos().y < options.windowSize.height:
 		move += Vector2(0, 1)
 	
-	if Input.is_action_pressed("ui_right") and get_node("KinematicBody2D").get_global_pos().x < OS.get_window_size().width:
+	if Input.is_action_pressed("ui_right") and get_node("KinematicBody2D").get_global_pos().x < options.windowSize.width:
 		move += Vector2(1, 0)
 		if get_node("KinematicBody2D/anim").get_current_animation() != "right":
 			get_node("KinematicBody2D/anim").play("right")
