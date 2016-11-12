@@ -46,6 +46,8 @@ shortcut = null
 text = "Back"
 flat = false
 
+[connection signal="exit_tree" from="." to="." method="_on_options_menu_exit_tree"]
+
 [connection signal="toggled" from="fullscreen" to="." method="_on_fullscreen_toggled"]
 
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]

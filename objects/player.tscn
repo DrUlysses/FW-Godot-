@@ -8,19 +8,18 @@
 custom_solver_bias = 0.0
 points = Vector2Array( -4.95106, 7.574, -2.5, 4.15432, 0.0787239, 7.55074 )
 
-[sub_resource type="ConvexPolygonShape2D" id=7]
+[sub_resource type="ConvexPolygonShape2D" id=2]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -4.7898, 7.10795, -3.13789, 5.67944, -1.82231, 5.62537, -0.175353, 7.17104, -0.160516, 7.5, -0.877658, 7.5721, -4.0776, 7.59013, -4.7799, 7.5 )
 
-[sub_resource type="ConvexPolygonShape2D" id=8]
+[sub_resource type="ConvexPolygonShape2D" id=3]
 
 custom_solver_bias = 0.0
 points = Vector2Array( -2.27238, 4.23742, -1.82231, 5.20177, -1.82231, 5.62537, -3.13789, 5.67944, -3.13295, 5.19727, -2.68783, 4.23742 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 
-resource/name = "death"
 length = 0.3
 loop = true
 step = 0.1
@@ -30,9 +29,8 @@ tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0, 0.1 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 6, 7 ] }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 
-resource/name = "left"
 length = 0.3
 loop = true
 step = 0.1
@@ -42,9 +40,8 @@ tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0, 0.1 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 2, 3 ] }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 
-resource/name = "right"
 length = 0.3
 loop = true
 step = 0.1
@@ -54,7 +51,7 @@ tracks/0/interp = 1
 tracks/0/imported = false
 tracks/0/keys = { "times":FloatArray( 0, 0.1 ), "transitions":FloatArray( 1, 1 ), "update":1, "values":[ 4, 5 ] }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 
 length = 0.3
 loop = true
@@ -81,10 +78,10 @@ script/script = ExtResource( 1 )
 
 transform/pos = Vector2( 0.00920105, 1.04209 )
 input/pickable = false
-shapes/0/shape = SubResource( 7 )
+shapes/0/shape = SubResource( 2 )
 shapes/0/transform = Matrix32( 8.40668, 0, 0, 9.22655, 20.8002, -61.6568 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 8 )
+shapes/1/shape = SubResource( 3 )
 shapes/1/transform = Matrix32( 8.40668, 0, 0, 9.22655, 20.8002, -61.6568 )
 shapes/1/trigger = false
 collision/layers = 1
@@ -157,10 +154,10 @@ z/relative = false
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/death = SubResource( 3 )
-anims/left = SubResource( 4 )
-anims/right = SubResource( 5 )
-anims/standart = SubResource( 6 )
+anims/death = SubResource( 4 )
+anims/left = SubResource( 5 )
+anims/right = SubResource( 6 )
+anims/standart = SubResource( 7 )
 next/standart = ""
 playback/active = true
 playback/speed = 1.0
