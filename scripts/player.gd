@@ -7,6 +7,7 @@ var live = true
 var damage = 100
 var bullet = preload("res://objects/bullet_0.tscn")
 
+
 func _ready():
 	set_fixed_process(true)
 
@@ -35,11 +36,12 @@ func _fixed_process(delta):
 	get_node("KinematicBody2D").move(move*speed)
 #collision
 	if get_node("KinematicBody2D").is_colliding():
-		var collidingBody = get_node("KinematicBody2D").get_collider()
-		var zalupa = collidingBody.get_method_list()
-		if collidingBody.has_method("damage_taken"):
-			print("pizda")
-			collidingBody.damage_taken(damage)
+		print(get_node("KinematicBody2D").get_collider().has_method("damage_taken"))
+		#Идёт переход сразу на кинематик бади, поэтому нужно либо переставить скрипт, либо создать новый для этого метода, либо гет парент использовать, если он есть, чтобы добраться до основного нода, где и лежит скрипт
+		#print(get_node("KinematicBody2D").get_collider().has_method("damage"))
+#	if get_node("KinematicBody2D").get_collider().has_method("damage_taken"):
+#			print("get")
+#			get_node("KinematicBody2D").get_collider().damage_taken(damage)
 
 	if hp <= 0:
 		live = false
@@ -64,5 +66,5 @@ func _on_timer_timeout():
 #func _on_back_to_menu_pressed():
 #	get_tree().change_scene("res://main_menu.tscn")
 
-func damage_taken(damage):
-	hp -= damage
+func damage_taken(delta):
+	hp -= delta

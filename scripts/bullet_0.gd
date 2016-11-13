@@ -26,5 +26,5 @@ func _fixed_process(delta):
 func _ready():
 	set_fixed_process(true)
 
-func damage_taken(damage):
-	hp -= damage
+func damage_taken(delta):
+	hp -= delta

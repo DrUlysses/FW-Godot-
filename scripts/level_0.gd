@@ -1,7 +1,6 @@
 
 extends Node2D
 
-
 func _ready():
 	set_fixed_process(true)
 	get_node("player/KinematicBody2D").set_pos(Vector2(global.options.windowSize.width*0.5, global.options.windowSize.height*0.9))

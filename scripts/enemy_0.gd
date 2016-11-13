@@ -29,5 +29,5 @@ func _fixed_process(delta):
 		if collidingBody.has_method("damage_taken"):
 			collidingBody.damage_taken(damage)
 
-func damage_taken(damage):
-	hp -= damage
+func damage_taken(delta):
+	hp -= delta
