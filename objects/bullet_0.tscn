@@ -32,7 +32,7 @@ linear_damp = 0.1
 angular_damp = 1.0
 script/script = ExtResource( 1 )
 
-[node name="physik" type="KinematicBody2D" parent="."]
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 
 input/pickable = false
 shapes/0/shape = SubResource( 1 )
@@ -47,20 +47,20 @@ shapes/2/trigger = false
 shapes/3/shape = SubResource( 4 )
 shapes/3/transform = Matrix32( -0.699033, 0, 0, 0.351333, 0, 0 )
 shapes/3/trigger = false
-collision/layers = 1
+collision/layers = 524288
 collision/mask = 1
 collision/margin = 0.001
 
-[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="physik"]
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="KinematicBody2D"]
 
 rect = Rect2( -10, -10, 20, 20 )
 
-[node name="Sprite" type="Sprite" parent="physik"]
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
 
 texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 3, 9 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="physik"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
 
 transform/scale = Vector2( -0.699033, 0.351333 )
 build_mode = 0
@@ -68,7 +68,7 @@ polygon = Vector2Array( 0.723266, -12.8363, 0.723266, -10.0029, 2.18577, -10.002
 shape_range = Vector2( 0, 3 )
 trigger = false
 
-[node name="Particles2D" type="Particles2D" parent="physik"]
+[node name="Particles2D" type="Particles2D" parent="KinematicBody2D"]
 
 transform/pos = Vector2( -0.0285263, 0.0262928 )
 config/amount = 2
@@ -92,7 +92,5 @@ params/hue_variation = 0.0
 params/anim_speed_scale = 0.0
 params/anim_initial_pos = 0.0
 color/color = Color( 0.270588, 0.290196, 0.921569, 1 )
-
-[connection signal="body_enter" from="." to="." method="_on_bullet_0_body_enter"]
 
 

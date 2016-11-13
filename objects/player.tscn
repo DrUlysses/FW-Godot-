@@ -8,15 +8,15 @@
 custom_solver_bias = 0.0
 points = Vector2Array( -4.95106, 7.574, -2.5, 4.15432, 0.0787239, 7.55074 )
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
+[sub_resource type="ConvexPolygonShape2D" id=8]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -4.7898, 7.10795, -3.13789, 5.67944, -1.82231, 5.62537, -0.175353, 7.17104, -0.160516, 7.5, -0.877658, 7.5721, -4.0776, 7.59013, -4.7799, 7.5 )
+points = Vector2Array( 1.5087, 0.950311, -1.49164, 0.981027, -2.22206, 0.704582, -0.603901, -0.861937, 0.60972, -0.923369, 2.16046, 0.653389 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=9]
 
 custom_solver_bias = 0.0
-points = Vector2Array( -2.27238, 4.23742, -1.82231, 5.20177, -1.82231, 5.62537, -3.13789, 5.67944, -3.13295, 5.19727, -2.68783, 4.23742 )
+points = Vector2Array( 0.463636, -1.84485, 0.60972, -0.923369, -0.603901, -0.861937, -0.502766, -1.79366, -0.00832804, -2.31583 )
 
 [sub_resource type="Animation" id=4]
 
@@ -78,22 +78,21 @@ script/script = ExtResource( 1 )
 
 transform/pos = Vector2( 0.00920105, 1.04209 )
 input/pickable = false
-shapes/0/shape = SubResource( 2 )
-shapes/0/transform = Matrix32( 8.40668, 0, 0, 9.22655, 20.8002, -61.6568 )
+shapes/0/shape = SubResource( 8 )
+shapes/0/transform = Matrix32( 8.40668, 0, 0, 9.22655, 0, 0 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 3 )
-shapes/1/transform = Matrix32( 8.40668, 0, 0, 9.22655, 20.8002, -61.6568 )
+shapes/1/shape = SubResource( 9 )
+shapes/1/transform = Matrix32( 8.40668, 0, 0, 9.22655, 0, 0 )
 shapes/1/trigger = false
-collision/layers = 1
+collision/layers = 524288
 collision/mask = 1
 collision/margin = 0.08
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="KinematicBody2D"]
 
-transform/pos = Vector2( 20.8002, -61.6568 )
 transform/scale = Vector2( 8.40668, 9.22655 )
 build_mode = 0
-polygon = Vector2Array( -0.160516, 7.5, -0.877658, 7.5721, -4.0776, 7.59013, -4.7799, 7.5, -4.7898, 7.10795, -3.13789, 5.67944, -3.13295, 5.19727, -2.68783, 4.23742, -2.27238, 4.23742, -1.82231, 5.20177, -1.82231, 5.62537, -0.175353, 7.17104 )
+polygon = Vector2Array( -1.49164, 0.981027, -2.22206, 0.704582, -0.603901, -0.861937, -0.502766, -1.79366, -0.00832804, -2.31583, 0.463636, -1.84485, 0.60972, -0.923369, 2.16046, 0.653389, 1.5087, 0.950311 )
 shape_range = Vector2( 0, 1 )
 trigger = false
 
@@ -168,7 +167,6 @@ autoplay = "standart"
 
 [node name="Sprite" type="Sprite" parent="KinematicBody2D"]
 
-transform/pos = Vector2( -0.00920105, -1.04209 )
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 2
@@ -176,7 +174,7 @@ hframes = 2
 [node name="timer" type="Timer" parent="KinematicBody2D"]
 
 process_mode = 1
-wait_time = 0.5
+wait_time = 0.153619
 one_shot = false
 autostart = true
 

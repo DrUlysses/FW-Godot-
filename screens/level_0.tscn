@@ -7,16 +7,14 @@
 
 script/script = ExtResource( 1 )
 
-[node name="player" parent="." instance=ExtResource( 2 )]
-
-transform/pos = Vector2( 510.04, 669.538 )
-
 [node name="enemy_spawn" type="Timer" parent="."]
 
 process_mode = 1
 wait_time = 2.0
 one_shot = false
-autostart = false
+autostart = true
+
+[node name="player" parent="." instance=ExtResource( 2 )]
 
 [connection signal="timeout" from="enemy_spawn" to="." method="_on_enemy_spawn_timeout"]
 
