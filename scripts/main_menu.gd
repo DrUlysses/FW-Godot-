@@ -1,6 +1,6 @@
 
 extends Control
-
+#add loading screen after adding 1mio code blocks
 func _on_new_game_pressed():
 	get_tree().change_scene("res://screens/new_game_menu.tscn")
 

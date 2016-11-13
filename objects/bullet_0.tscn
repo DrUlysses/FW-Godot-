@@ -49,7 +49,7 @@ shapes/3/transform = Matrix32( -0.699033, 0, 0, 0.351333, 0, 0 )
 shapes/3/trigger = false
 collision/layers = 1
 collision/mask = 1
-collision/margin = 0.08
+collision/margin = 0.001
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="physik"]
 
@@ -91,6 +91,7 @@ params/final_size = 0.0
 params/hue_variation = 0.0
 params/anim_speed_scale = 0.0
 params/anim_initial_pos = 0.0
+color/color = Color( 0.270588, 0.290196, 0.921569, 1 )
 
 [connection signal="body_enter" from="." to="." method="_on_bullet_0_body_enter"]
 

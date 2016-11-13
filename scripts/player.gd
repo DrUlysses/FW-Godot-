@@ -28,7 +28,7 @@ func _fixed_process(delta):
 	
 	if move == Vector2(0, 0) and get_node("KinematicBody2D/anim").get_current_animation() != "standart":
 		get_node("KinematicBody2D/anim").play("standart")
-	
+	#add anim and partical change for explosive
 	get_node("KinematicBody2D").move(move*speed)
 
 func _on_timer_timeout():
@@ -36,7 +36,7 @@ func _on_timer_timeout():
 		var bulletInstance = bullet.instance()
 		var gunPos = get_node("KinematicBody2D/gun").get_global_pos()
 		#добавить динамичный тип пули
-		bulletInstance.set_global_pos(gunPos)
+		bulletInstance.set_pos(gunPos)
 		get_node(".").add_child(bulletInstance)
 #func _hit_something():
 #	if (killed):

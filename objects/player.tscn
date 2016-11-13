@@ -119,6 +119,7 @@ params/final_size = 1.0
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
+color/color = Color( 0.0588235, 0.478431, 0.941176, 1 )
 
 [node name="thruster_right" type="Particles2D" parent="KinematicBody2D"]
 
@@ -142,10 +143,11 @@ params/final_size = 1.0
 params/hue_variation = 0.0
 params/anim_speed_scale = 1.0
 params/anim_initial_pos = 0.0
+color/color = Color( 0.0588235, 0.478431, 0.941176, 1 )
 
 [node name="gun" type="Position2D" parent="KinematicBody2D"]
 
-transform/pos = Vector2( -0.106555, -23.4161 )
+transform/pos = Vector2( -0.023805, -23.554 )
 transform/scale = Vector2( 0.341246, 0.325602 )
 z/relative = false
 
