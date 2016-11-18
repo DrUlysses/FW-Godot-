@@ -7,6 +7,10 @@ windowSize = Vector2(OS.get_window_size()),
 screenSize = Vector2(OS.get_screen_size())
 }
 
+var level_0Player = {
+bullet = "bullet_0"
+}
+
 func save_game():
 	var f = File.new()
 	var err = f.open_encrypted_with_pass("user://savedata.bin", File.WRITE, "mamke_privet,_cheater_poganii")

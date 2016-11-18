@@ -153,6 +153,7 @@ z/relative = false
 
 [node name="anim" type="AnimationPlayer" parent="KinematicBody2D"]
 
+process/pause_mode = 2
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
@@ -171,6 +172,7 @@ autoplay = "standart"
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 2
+frame = 6
 
 [node name="timer" type="Timer" parent="KinematicBody2D"]
 

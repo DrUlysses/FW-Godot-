@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=5 format=1]
 
 [ext_resource path="res://scripts/main_menu.gd" type="Script" id=1]
 [ext_resource path="res://media/repMenu.ogg" type="AudioStream" id=2]
+[ext_resource path="res://media/font.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://screens/options_menu.tscn" type="PackedScene" id=4]
 
 [node name="main_menu" type="Control"]
 
@@ -39,6 +41,7 @@ margin/left = -392.0
 margin/top = 224.0
 margin/right = -592.0
 margin/bottom = -204.0
+custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -58,6 +61,7 @@ margin/left = -392.0
 margin/top = 274.0
 margin/right = -592.0
 margin/bottom = -254.0
+custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -77,6 +81,7 @@ margin/left = -392.0
 margin/top = 324.0
 margin/right = -592.0
 margin/bottom = -304.0
+custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
@@ -96,11 +101,16 @@ margin/left = -392.0
 margin/top = 374.0
 margin/right = -592.0
 margin/bottom = -354.0
+custom_fonts/font = ExtResource( 3 )
 toggle_mode = false
 enabled_focus_mode = 2
 shortcut = null
 text = "Exit"
 flat = false
+
+[node name="options_menu" parent="." instance=ExtResource( 4 )]
+
+visibility/visible = false
 
 [connection signal="pressed" from="new_game" to="." method="_on_new_game_pressed"]
 

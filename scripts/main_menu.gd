@@ -8,4 +8,5 @@ func _on_exit_pressed():
 	get_tree().quit()
 
 func _on_options_pressed():
-	get_tree().change_scene("res://screens/options_menu.tscn")
+	
+	get_node("options_menu").show()
