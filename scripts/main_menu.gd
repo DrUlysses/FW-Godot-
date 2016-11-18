@@ -8,5 +8,5 @@ func _on_exit_pressed():
 	get_tree().quit()
 
 func _on_options_pressed():
-	
+	#add menu control .gd
 	get_node("options_menu").show()

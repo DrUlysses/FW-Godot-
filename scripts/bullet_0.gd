@@ -18,8 +18,9 @@ func _fixed_process(delta):
 		get_node(".").queue_free()
 	
 	if get_node("KinematicBody2D").is_colliding():
-		if get_node("KinematicBody2D").get_collider().get_parent().has_method("damage_taken"):
-			get_node("KinematicBody2D").get_collider().get_parent().damage_taken(damage)
+		var collidingBody = get_node("KinematicBody2D").get_collider().get_parent()
+		if collidingBody.has_method("damage_taken"):
+			collidingBody.damage_taken(damage)
 
 
 func _ready():

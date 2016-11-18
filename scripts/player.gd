@@ -38,8 +38,9 @@ func _fixed_process(delta):
 #collision
 	if get_node("KinematicBody2D").is_colliding():
 		#(приём долбоёбский сейчас, надо исправить его потом)Идёт переход сразу на кинематик бади, поэтому нужно либо переставить скрипт, либо создать новый для этого метода, либо гет парент использовать, если он есть, чтобы добраться до основного нода, где и лежит скрипт
-		if get_node("KinematicBody2D").get_collider().get_parent().has_method("damage_taken"):
-			get_node("KinematicBody2D").get_collider().get_parent().damage_taken(damage)
+		var collidingBody = get_node("KinematicBody2D").get_collider().get_parent()
+		if collidingBody.has_method("damage_taken"):
+			collidingBody.damage_taken(damage)
 
 	if hp <= 0:
 		live = false
