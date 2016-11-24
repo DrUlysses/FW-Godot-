@@ -8,12 +8,12 @@
 custom_solver_bias = 0.0
 points = Vector2Array( -4.95106, 7.574, -2.5, 4.15432, 0.0787239, 7.55074 )
 
-[sub_resource type="ConvexPolygonShape2D" id=2]
+[sub_resource type="ConvexPolygonShape2D" id=8]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 1.5087, 0.950311, -1.49164, 0.981027, -2.22206, 0.704582, -0.603901, -0.861937, 0.60972, -0.923369, 2.16046, 0.653389 )
 
-[sub_resource type="ConvexPolygonShape2D" id=3]
+[sub_resource type="ConvexPolygonShape2D" id=9]
 
 custom_solver_bias = 0.0
 points = Vector2Array( 0.463636, -1.84485, 0.60972, -0.923369, -0.603901, -0.861937, -0.502766, -1.79366, -0.00832804, -2.31583 )
@@ -79,10 +79,10 @@ script/script = ExtResource( 1 )
 
 transform/pos = Vector2( 0.00920105, 1.04209 )
 input/pickable = false
-shapes/0/shape = SubResource( 2 )
+shapes/0/shape = SubResource( 8 )
 shapes/0/transform = Matrix32( 8.40668, 0, 0, 9.22655, 0, 0 )
 shapes/0/trigger = false
-shapes/1/shape = SubResource( 3 )
+shapes/1/shape = SubResource( 9 )
 shapes/1/transform = Matrix32( 8.40668, 0, 0, 9.22655, 0, 0 )
 shapes/1/trigger = false
 collision/layers = 524288
@@ -172,7 +172,6 @@ autoplay = "standart"
 texture = ExtResource( 2 )
 vframes = 4
 hframes = 2
-frame = 6
 
 [node name="timer" type="Timer" parent="KinematicBody2D"]
 
