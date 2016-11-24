@@ -1,6 +1,9 @@
 
 extends Control
 
+var currentScreen = "intro.tscn"
+var previousScreen = "intro.tscn"
+
 var options = {
 fullscreen = false,
 windowSize = Vector2(OS.get_window_size()),
@@ -24,6 +27,18 @@ func load_game():
 	var err = f.open_encrypted_with_pass("user://savedata.bin", File.READ, "mamke_privet,_cheater_poganii")
 	options = f.get_var()
 	f.close()
+
+func set_screen(sceneInScreensFolder):
+	#add screen changer for all, or rework this systen, cos its pass not for all situations
+	get_tree().change_scene("res://screens/" + sceneInScreensFolder)
+	previousScreen = currentScreen
+	currentScreen = sceneInScreensFolder
+
+func get_currentScreen(scene):
+	return(currentScreen)
+
+func get_previousScreen(scene):
+	return(previousScreen)
 
 #func save_game():
 #	var savegame = File.new()
